@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/reset', 'HomeController@reset');
+
+Route::get('/confirm_reset', 'HomeController@confirm_reset');
+
+Route::post('/home', 'HomeController@create_operation');
