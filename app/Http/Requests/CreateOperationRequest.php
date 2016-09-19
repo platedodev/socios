@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
 use Illuminate\Support\Facades\Auth;
 
 class CreateOperationRequest extends Request
@@ -25,14 +24,14 @@ class CreateOperationRequest extends Request
     public function rules()
     {
         return [
-            'amount' => 'required|max:9999999999999999999999999999|min:1|numeric'
+            'amount' => 'required|max:9999999999999999999999999999|min:1|numeric',
         ];
     }
 
     public function attributes()
     {
         return [
-            'amount'    => 'monto'
+            'amount'    => 'monto',
         ];
     }
 }

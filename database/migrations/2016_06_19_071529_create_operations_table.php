@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
 class CreateOperationsTable extends Migration
 {
@@ -14,7 +14,7 @@ class CreateOperationsTable extends Migration
     {
         Schema::create('operations', function (Blueprint $table) {
             $table->increments('operation_id');
-            $table->decimal('amount',20,2)->unsigned();
+            $table->decimal('amount', 20, 2)->unsigned();
             $table->integer('partner')->unsigned();
             $table->timestamps();
 

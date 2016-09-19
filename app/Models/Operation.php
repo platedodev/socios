@@ -8,11 +8,13 @@ class Operation extends Model
 {
     public $primaryKey = 'operation_id';
 
-    public function user() {
+    public function user()
+    {
         return $this->hasOne('App\Models\User', 'id', 'partner');
     }
 
-    public function date() {
+    public function date()
+    {
         $time = strtotime($this->created_at);
         $formatted = date('l, h:i a', $time);
         $translated = str_replace(
@@ -23,7 +25,7 @@ class Operation extends Model
                 'Thursday',
                 'Friday',
                 'Saturday',
-                'Sunday'
+                'Sunday',
             ],
             [
                 'Lunes',
@@ -32,9 +34,10 @@ class Operation extends Model
                 'Jueves',
                 'Viernes',
                 'Sábado',
-                'Domingo'
+                'Domingo',
             ],
             $formatted);
+
         return $translated;
     }
 }
