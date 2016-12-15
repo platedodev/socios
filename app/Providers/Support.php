@@ -4,6 +4,7 @@
  * Need any support? Contact me at plateadodev@gmail.com
  * :).
  */
+
 namespace App\Providers;
 
 class Support
